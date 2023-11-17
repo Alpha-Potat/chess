@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "chess-in-terminal"
+version = "0.1.0"
+description = ""
+authors = ["Alpha-Potat <luchinin.n@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.26.2"
+rich = "^13.7.0"
+
+
+[build-system]
+requires = ["poetry-core==1.7.1"]
+build-backend = "poetry.core.masonry.api"
