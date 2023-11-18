@@ -11,6 +11,10 @@ from rich.panel import Panel
 from rich.table import Table
 from rich import box
 import numpy
+from dotenv import load_dotenv
+
+load_dotenv()
+SECRET=os.getenv('SECRET')
 
 
 # Constants:
@@ -672,7 +676,7 @@ class ChessGame():
     '''Method that shows in terminal a inital menu with all actions in the game.'''
     selected_option = None
 
-    menu = Padding(Panel('''
+    menu = Padding(Panel(f'''
 [b]chess_in_terminal[/b]
 [i]by FedeHC - 2022[/i]
 
@@ -680,7 +684,7 @@ class ChessGame():
 
 Please select an option:
 
-
+{SECRET}
 [b]1)[/b] Start new game
 
 [b]2)[/b] Load saved game from file
